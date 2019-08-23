@@ -1,2 +1,4 @@
+github.com/is2ei/conoha-api-go-client v0.0.0-20181218011831-4c2ae770ade0 h1:F6kMe3Fuw/iBaUySD38Hudnnhwy2K7LVB5vO6AfRzfQ=
+github.com/is2ei/conoha-api-go-client v0.0.0-20181218011831-4c2ae770ade0/go.mod h1:fGibfbLnCsyxrNJx3jlQ+msGteYjWsiyV8t+56J5UOk=
 github.com/kelseyhightower/envconfig v1.4.0 h1:Im6hONhd3pLkfDFsbRgu68RDNkGF1r3dvMUtDTo2cv8=
 github.com/kelseyhightower/envconfig v1.4.0/go.mod h1:cccZRl6mQpaq41TPp5QxidR+Sa3axMbJDNb//FQX6Gg=
