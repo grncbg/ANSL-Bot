@@ -16,8 +16,8 @@ type ConohaSettings struct {
 		IdentityServiceURL      string `split_words:"true"`
 		NetworkServiceURL       string `split_words:"true"`
 	}
-	Username string `required:"true" split_words:"true"`
-	Password string `required:"true" split_words:"true"`
+	Username string `required:"true"`
+	Password string `required:"true"`
 	TenantID string `required:"true" split_words:"true"`
 	Token    string
 }
