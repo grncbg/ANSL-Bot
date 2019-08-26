@@ -21,6 +21,7 @@ type ConohaSettings struct {
 	TenantID string `required:"true" split_words:"true"`
 	Token    string
 	Image    string `required:"true"`
+	Flavor   string `required:"true"`
 }
 
 // NewConohaSettings is constructor of ConohaSettings
