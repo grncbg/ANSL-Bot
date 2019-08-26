@@ -20,6 +20,7 @@ type ConohaSettings struct {
 	Password string `required:"true"`
 	TenantID string `required:"true" split_words:"true"`
 	Token    string
+	Image    string `required:"true"`
 }
 
 // NewConohaSettings is constructor of ConohaSettings
