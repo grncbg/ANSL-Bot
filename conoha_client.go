@@ -6,9 +6,15 @@ import (
 	"github.com/is2ei/conoha-api-go-client/conoha"
 )
 
+// ConohaClient is client of conoha API
+type ConohaClient struct {
+	settings ConohaSettings
+	client   *conoha.Conoha
+}
+
 // NewConohaClient makes new conoha client
-func NewConohaClient(s *ConohaSettings) (*conoha.Conoha, error) {
-	conohaClient := conoha.NewConoha(
+func NewConohaClient(s ConohaSettings) (*ConohaClient, error) {
+	client := conoha.NewConoha(
 		s.Endpoints.IdentityServiceURL,
 		s.Endpoints.AccountServiceURL,
 		s.Endpoints.ComputeServiceURL,
@@ -25,12 +31,18 @@ func NewConohaClient(s *ConohaSettings) (*conoha.Conoha, error) {
 		"",
 	)
 
-	access, _, err := conohaClient.IdentityToken(context.Background())
+	access, _, err := client.IdentityToken(context.Background())
 	if err != nil {
 		return nil, err
 	}
 
-	conohaClient.Token = access.Token.ID
+	client.Token = access.Token.ID
 
-	return conohaClient, nil
+	conohaClient := ConohaClient{
+		settings: s,
+		client:   client,
+	}
+	conohaClient.settings.Token = access.Token.ID
+
+	return &conohaClient, nil
 }
