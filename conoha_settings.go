@@ -16,12 +16,13 @@ type ConohaSettings struct {
 		IdentityServiceURL      string `split_words:"true"`
 		NetworkServiceURL       string `split_words:"true"`
 	}
-	Username string `required:"true"`
-	Password string `required:"true"`
-	TenantID string `required:"true" split_words:"true"`
-	Token    string
-	Image    string `required:"true"`
-	Flavor   string `required:"true"`
+	Username      string `required:"true"`
+	Password      string `required:"true"`
+	TenantID      string `required:"true" split_words:"true"`
+	Token         string
+	Image         string `required:"true"`
+	Flavor        string `required:"true"`
+	AdminPassword string `required:"true" split_words:"true"`
 }
 
 // NewConohaSettings is constructor of ConohaSettings
